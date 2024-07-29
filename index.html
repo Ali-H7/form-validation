@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="warn"></p>
+      <form action="" novalidate>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="" id="email" required />
+        </div>
+        <div>
+          <label for="password1">Password</label>
+          <input
+            type="password"
+            name=""
+            id="password1"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+        </div>
+        <div>
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            name=""
+            id="password2"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+        </div>
+        <div>
+          <label for="zip">Zip Code</label>
+          <input type="number" name="" id="zip" required min="0" />
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <input type="input" name="" id="country" required />
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
